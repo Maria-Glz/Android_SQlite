@@ -115,6 +115,12 @@
             android:text="Registrar" />
 
         <Button
+            android:id="@+id/idbuscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar" />
+
+        <Button
             android:id="@+id/ideditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -131,25 +137,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Mostrar Registros" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ID" />
-
-        <EditText
-            android:id="@+id/busqueda"
-            android:layout_width="254dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number" />
-
-        <Button
-            android:id="@+id/idbuscar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Buscar" />
 
     </LinearLayout>
 </RelativeLayout>

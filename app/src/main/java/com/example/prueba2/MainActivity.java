@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         idturbidez=(EditText)findViewById(R.id.idturbidez);
         idconductividad=(EditText)findViewById(R.id.idconductividad);
 
+
         //BOTONES
         idguardar=(Button)findViewById(R.id.idguardar);
         idmostrar=(Button)findViewById(R.id.idmostrar);
@@ -51,6 +52,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent mostrarCu=new Intent(getApplicationContext(),CuActivity.class);
                 startActivity(mostrarCu);
+            }
+        });
+
+        idbuscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                funcionamiento funci = new funcionamiento();
+                basedatos.buscar(funci,idid.getText().toString());
+                //idid.setText(funci.getId());
+                idtemperatura.setText(funci.getTemperatura());
+                idph.setText(funci.getPh());
+                idturbidez.setText(funci.getTurbidez());
+                idconductividad.setText(funci.getConductividad());
+                idoxigeno_disuelto.setText(funci.getOxigeno_disuelto());
+
             }
         });
 
