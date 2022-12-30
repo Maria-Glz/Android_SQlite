@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/view_noRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/view_temperatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Temperatura"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/view_ph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ph"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/view_oxigeno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oxigeno disuelto"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/view_turbidez"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Turbidez"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/view_conductividad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Conductividad"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+</LinearLayout>
