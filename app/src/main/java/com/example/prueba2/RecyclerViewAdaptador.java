@@ -14,12 +14,12 @@ import java.util.List;
 public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdaptador.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder
     {
-        private TextView temperatura,ph,oxigeno_disuelto,turbidez,conductividad;
+        private TextView id, temperatura,ph,oxigeno_disuelto,turbidez,conductividad;
         ImageView icono;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
+            id=(TextView)itemView.findViewById(R.id.textView);
             temperatura=(TextView)itemView.findViewById(R.id.textView2);
             ph = (TextView)itemView.findViewById(R.id.textView3);
             oxigeno_disuelto = (TextView)itemView.findViewById(R.id.textView4);
@@ -44,6 +44,7 @@ public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdap
     //realiza modificaciones del contenido para cada item
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.id.setText(funcionamientoList.get(position).getId());
         holder.temperatura.setText(funcionamientoList.get(position).getTemperatura());
         holder.ph.setText( funcionamientoList.get(position).getPh());
         holder.oxigeno_disuelto.setText(funcionamientoList.get(position).getOxigeno_disuelto());

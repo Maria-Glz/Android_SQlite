@@ -13,7 +13,7 @@ public class basededatos extends SQLiteOpenHelper {
 
     private static final String registrodatos="REGISTROBD.db";
     private static final int version=1;
-    private static final String TABLA_REGISTROBD="CREATE TABLE REGISTROS(temperatura TEXT, ph TEXT, conductividad TEXT, turbidez TEXT, oxigeno_disuelto TEXT)";
+    private static final String TABLA_REGISTROBD="CREATE TABLE REGISTROS(id TEXT, temperatura TEXT, ph TEXT, conductividad TEXT, turbidez TEXT, oxigeno_disuelto TEXT)";
 
     public basededatos(Context context) {
         super(context, registrodatos, null, version);
@@ -29,10 +29,10 @@ public class basededatos extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE"+TABLA_REGISTROBD);
         sqLiteDatabase.execSQL(TABLA_REGISTROBD);
     }
-    public void agregarRegistros(String temperatura, String ph, String oxigeno_disuelto, String turbidez, String conductividad){
+    public void agregarRegistros(String id, String temperatura, String ph, String oxigeno_disuelto, String turbidez, String conductividad){
         SQLiteDatabase db=getWritableDatabase();
         if (db!=null){
-            db.execSQL("INSERT INTO REGISTROS VALUES('"+temperatura+"','"+ph+"','"+oxigeno_disuelto+"','"+turbidez+"','"+conductividad+"') ");
+            db.execSQL("INSERT INTO REGISTROS VALUES('"+id+"', '"+temperatura+"','"+ph+"','"+oxigeno_disuelto+"','"+turbidez+"','"+conductividad+"') ");
             db.close();
         }
 
@@ -49,11 +49,12 @@ public class basededatos extends SQLiteOpenHelper {
         {
             do{
                 funcio = new funcionamiento();
-                funcio.setTemperatura(cursor.getString(0));
-                funcio.setPh(cursor.getString(1));
-                funcio.setTurbidez(cursor.getString(2));
-                funcio.setConductividad(cursor.getString(3));
-                funcio.setOxigeno_disuelto(cursor.getString(4));
+                funcio.setId(cursor.getString(0));
+                funcio.setTemperatura(cursor.getString(1));
+                funcio.setPh(cursor.getString(2));
+                funcio.setTurbidez(cursor.getString(3));
+                funcio.setConductividad(cursor.getString(4));
+                funcio.setOxigeno_disuelto(cursor.getString(5));
                 Registros.add(funcio);
 
                // Registros.add(new funcionamiento(cursor.getString(0), cursor.getString(1),cursor.getString(2),

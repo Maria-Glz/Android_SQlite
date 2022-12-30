@@ -13,7 +13,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText idtemperatura,idph,idoxigeno_disuelto,idturbidez,idconductividad;
+    EditText idid, idtemperatura,idph,idoxigeno_disuelto,idturbidez,idconductividad;
     Button idguardar, idmostrar, idbuscar;
 
 
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        idid=(EditText)findViewById(R.id.idid);
         idtemperatura=(EditText)findViewById(R.id.idtemperatura);
         idph=(EditText)findViewById(R.id.idph);
         idoxigeno_disuelto=(EditText)findViewById(R.id.idoxigeno_disuelto);
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         idguardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                basedatos.agregarRegistros(idtemperatura.getText().toString(),idph.getText().toString(),idoxigeno_disuelto.getText().toString(),idturbidez.getText().toString(),idconductividad.getText().toString());
+                basedatos.agregarRegistros(idid.getText().toString(),idtemperatura.getText().toString(),idph.getText().toString(),idoxigeno_disuelto.getText().toString(),idturbidez.getText().toString(),idconductividad.getText().toString());
                 Toast.makeText(getApplicationContext(),"Se agrego correctamente el registro",Toast.LENGTH_SHORT).show();
             }
 

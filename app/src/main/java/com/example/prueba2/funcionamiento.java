@@ -3,14 +3,14 @@ package com.example.prueba2;
 public class funcionamiento {
 
     private int img;
-    private String idd,temperatura,ph,oxigeno_disuelto,turbidez,conductividad;
+    private String id,temperatura,ph,oxigeno_disuelto,turbidez,conductividad;
 
     public funcionamiento(String string, String cursorString, String s, String string1, String cursorString1)
     {
     }
 //texview en lugar de id
-    public funcionamiento(String idd, String temperatura, String ph, String oxigeno_disuelto, String turbidez, String conductividad) {
-        this.idd = idd;
+    public funcionamiento(String id, String temperatura, String ph, String oxigeno_disuelto, String turbidez, String conductividad) {
+        this.id = id;
         this.temperatura = temperatura;
         this.ph = ph;
         this.oxigeno_disuelto = oxigeno_disuelto;
@@ -66,10 +66,10 @@ public class funcionamiento {
 
 
     public String getId() {
-        return idd;
+        return id;
     }
-    public void setIdd(String idd) {
-        this.idd = idd;
+    public void setId(String id) {
+        this.id = id;
     }
 }
 
