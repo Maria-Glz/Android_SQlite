@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#70B8F1"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -15,6 +16,7 @@
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="15dp"
+        android:background="#FFFCFC"
         android:orientation="vertical">
 
         <TextView
@@ -24,7 +26,7 @@
             android:autoText="false"
             android:background="#00FFAFAF"
             android:gravity="center"
-            android:text="REGISTRO"
+            android:text="FORMULARIO DE REGISTRO"
             android:textColor="#4F1FA6"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -33,110 +35,217 @@
             android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Codigo" />
+            android:layout_marginTop="10dp"
+            android:text="Codigo"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/idid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="number"
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Temperatura" />
+            android:layout_marginTop="5dp"
+            android:text="Temperatura"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/idtemperatura"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="numberDecimal"
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ph" />
+            android:layout_marginTop="5dp"
+            android:text="Ph"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/idph"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Turbidez" />
+            android:layout_marginTop="5dp"
+            android:text="Turbidez"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/idturbidez"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="number|numberDecimal"
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Conductividad" />
+            android:layout_marginTop="5dp"
+            android:text="Conductividad"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/idconductividad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="number|numberDecimal"
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Oxigeno Disuelto" />
+            android:layout_marginTop="5dp"
+            android:text="Oxigeno Disuelto"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/idoxigeno_disuelto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="numberDecimal"
+            android:textAlignment="center" />
 
-        <Button
-            android:id="@+id/idguardar"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Registrar" />
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:background="#3F53C5"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/idbuscar"
+            <Button
+                android:id="@+id/idguardar"
+                android:layout_width="171dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+
+                android:background="#5093F6"
+                android:fontFamily="monospace"
+                android:lineSpacingExtra="12sp"
+                android:shadowColor="#8467B8"
+                android:shadowRadius="2"
+                android:soundEffectsEnabled="false"
+                android:text="Registrar"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/idbuscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#5093F6"
+                android:fontFamily="monospace"
+                android:shadowColor="#673AB7"
+                android:shadowRadius="2"
+                android:text="Buscar"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Buscar" />
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#FF3F53C5"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/ideditar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Editar" />
+            <Button
+                android:id="@+id/ideditar"
+                android:layout_width="171dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#5093F6"
+                android:fontFamily="monospace"
+                android:shadowColor="#673AB7"
+                android:shadowRadius="2"
+                android:text="Editar"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/ideliminar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Eliminar" />
+            <Button
+                android:id="@+id/ideliminar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#5093F6"
+                android:fontFamily="monospace"
+                android:shadowColor="#673AB7"
+                android:shadowRadius="2"
+                android:text="Eliminar"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/idmostrar"
-            android:layout_width="match_parent"
+            android:layout_width="289dp"
             android:layout_height="wrap_content"
-            android:text="Mostrar Registros" />
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:background="#5093F6"
+            android:fontFamily="monospace"
+            android:shadowColor="#673AB7"
+            android:shadowRadius="3"
+            android:text="Mostrar Registros"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 </RelativeLayout>

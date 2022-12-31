@@ -29,7 +29,7 @@ public class basededatos extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE" + TABLA_REGISTROBD);
         sqLiteDatabase.execSQL(TABLA_REGISTROBD);
     }
-
+    //------------------METODO QUE AGREGA EN LA BASE DE DATOS----------------------
     public void agregarRegistros(String id, String temperatura, String ph, String oxigeno_disuelto, String turbidez, String conductividad) {
         SQLiteDatabase db = getWritableDatabase();
         if (db != null) {
@@ -64,7 +64,7 @@ public class basededatos extends SQLiteOpenHelper {
         //cursor.close();
         return Registros;
     }
-
+    //------------------METODO QUE BUSCA EN LA BASE DE DATOS----------------------
     public void buscar(funcionamiento funcio, String id) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM REGISTROS WHERE  id='"+id+"'"+"LIMIT 1", null);
@@ -87,19 +87,22 @@ public class basededatos extends SQLiteOpenHelper {
         //cursor.close();
         //return funcio;
     }
+    //------------------METODO QUE EDITA EN LA BASE DE DATOS----------------------
+    public void editar(String id, String temperatura, String ph, String oxigeno_disuelto, String turbidez, String conductividad) {
+        SQLiteDatabase db = getWritableDatabase();
+        if (db != null) {
+            db.execSQL("UPDATE REGISTROS SET temperatura='"+temperatura+"', ph='"+ph+"',oxigeno_disuelto='"+oxigeno_disuelto+"',turbidez='"+turbidez+"',conductividad='"+conductividad+"' WHERE id='"+id+"'");
+
+        }
+    }
+   //------------------METODO QUE ELIMINA EN LA BASE DE DATOS----------------------
+    public void eliminar(String id) {
+        SQLiteDatabase db = getWritableDatabase();
+        if (db != null) {
+            db.execSQL("DELETE FROM REGISTROS WHERE id='"+id+"'");
+
+        }
+    }
 
 }
-   /* public void buscar(Modelo, cursos, String NO_REGISTRO){
-        SQLiteDatabase db=getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM REGISTROS WHERE NO_REGISTRO='"+NO_REGISTRO+"' ", null);
-        List<Cursos> cursos =new ArrayList<>();
-        if (cursor.moveToFirst())
-        {
-            do{
-                cursos.add(new Cursos )
-            }
-            while (cursor.moveToNext());
-        }
-        return cursos;
-    }
-*/
+
